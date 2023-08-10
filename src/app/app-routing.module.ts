@@ -13,7 +13,14 @@ const routes: Routes = [
   
   { path: 'c2oAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
   
-  { path: 'c2oAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) }];
+  { path: 'c2oAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
+
+  { path: 'cate', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
+
+  { path: 'cate', loadChildren: () => import('./components/category/allcategory/allcategory.module').then(m => m.AllcategoryModule) },
+
+  { path: 'cate', loadChildren: () => import('./components/category/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

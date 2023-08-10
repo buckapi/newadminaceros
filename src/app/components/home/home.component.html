@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-xl-6 col-xxl-12">
               <div class="row">
-                <div class="col-sm-6"  routerLink="c2oAll" style="cursor: pointer;">
+                <div class="col-lg-4 col-sm-6"  routerLink="c2oAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -28,18 +28,42 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                  <!-- <div class="col-sm-6"  routerLink="externalData" style="cursor: pointer;">
+                <div class="col-lg-4 col-sm-6"  routerLink="cate" style="cursor: pointer;">
+                    <div class="card avtivity-card">
+                        <div class="card-body">
+                            <div class="media align-items-center">
+                              <span class="activity-icon bgl-danger mr-md-4 mr-3">
+                                  <img src="assets/gymove/images/categorias.png" alt="" height="64">
+                                </span>
+                                <div class="media-body">
+                                    <p class="fs-14 mb-2">Inventario</p>
+                                    <!-- <span class="title text-black font-w600">{{allSize}}</span> -->
+                                    <span class="title text-black font-w600" *ngIf="allSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="allSize>0">{{allSize}} Categorias </span>
+                           
+                                </div>
+                            </div>
+                            <div class="progress" style="height:5px;">
+                                <div class="progress-bar bg-info" style="width: 82%; height:5px;" role="progressbar">
+                                    <span class="sr-only">42% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="effect bg-info"></div>
+                    </div>
+                </div>
+                  <div class=" col-lg-4 col-sm-6"  routerLink="externalData" style="cursor: pointer;">
                       <div class="card avtivity-card">
                           <div class="card-body">
                               <div class="media align-items-center">
                                   <span class="activity-icon bgl-success mr-md-4 mr-3">
-                                    <img src="assets/gymove/images/netIcon.png" alt="" height="64">
+                                    <img src="assets/gymove/images/ordenes.png" alt="" height="64">
                                   </span>
                                   <div class="media-body">
-                                      <p class="fs-14 mb-2">External DATA</p>
+                                      <p class="fs-14 mb-2">Ordenes</p>
 
                                       <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize<=0"> Loading ... </span>
-                                      <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize>0">{{yeoman.existenciasSize}} Registros </span>
+                                      <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize>0">{{yeoman.existenciasSize}} Solicitudes </span>
                                   </div>
                               </div>
                               <div class="progress" style="height:5px;">
@@ -50,7 +74,7 @@
                           </div>
                           <div class="effect bg-success"></div>
                       </div>
-                  </div> -->
+                  </div>
                  
                   <!-- <div class="col-sm-6">
                       <div class="card avtivity-card">

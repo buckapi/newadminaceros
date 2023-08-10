@@ -26,6 +26,9 @@ export interface TicketInterface {
 export interface SerialInterface {
 	serialT:string,
 }
+export interface CategoryInterface {
+
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -225,6 +228,12 @@ export class DataApiService {
 		const url_api=	this.yeoman.origin.restUrl+'/api/products';
 		return this.http
 		.post<ProductInterface>(url_api, product)
+		.pipe(map(data => data));
+	}
+	saveCategory(category :CategoryInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/category';
+		return this.http
+		.post<CategoryInterface>(url_api, category)
 		.pipe(map(data => data));
 	}
 	saveCar(car :CarInterface){
