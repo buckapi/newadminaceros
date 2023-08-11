@@ -17,13 +17,15 @@ declare const XM_Popup: any;
 export class HomeComponent implements OnInit {
   existencias: any[] = []; 
   all: any[] = []; 
+  allcategory: any[] = []; 
   existenciasSize:number=0;
-
   allSize:number=0;
+
+
   constructor( public existenciaService:ExistenciaService,
    
  public router:Router,
-public authRESTService:AuthRESTService,
+ public authRESTService:AuthRESTService,
     public script:ScriptService,public yeoman:Yeoman,
     public dataApiService:DataApiService
   ) { 
@@ -33,8 +35,8 @@ public authRESTService:AuthRESTService,
 
     });
     this.dataApiService.getAllCategory().subscribe(response=>{
-      this.yeoman.all=response;
-      this.allSize=this.yeoman.all.length;
+      this.yeoman.allcategory=response;
+      this.yeoman.allCategoriesSize=this.yeoman.allcategory.length;
 
     });
     this.obtenerExistencias();
@@ -82,7 +84,7 @@ public authRESTService:AuthRESTService,
         // Aquí puedes hacer algo con los datos obtenidos, como mostrarlos en el template.
       },
       (error) => {
-        console.error('Error al obtener existencias:', error);
+        // console.error('Error al obtener existencias:', error);
       }
     );
   }

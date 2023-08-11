@@ -11,10 +11,12 @@ export class Yeoman {
   all:any=[];
   existencias:any=[];
   existenciasSize:number=0;
+  allCategoriesSize:number=0;
     virtualRoute:any="dashboard";
     pop:Boolean=false;
     data:any={};
     products:any={};
+    categories:any=[];
     category:any={};
     allcategory:any=[];
     // products:any[]=[];

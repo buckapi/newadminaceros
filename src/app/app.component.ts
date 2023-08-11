@@ -66,26 +66,27 @@ export class AppComponent implements AfterViewInit {
     idBranch: ''
   };
   branchOptions = [
-    {
-      name: 'Accesorios',
-      images: ['assets/assetsdash/images/profile/profile.png'],
-      idBranch: 'ca000001'
-    },
-    {
-      name: 'Herramientas',
-      images: ['assets/assetsdash/images/profile/profile.png'],
-      idBranch: 'ca000002'
-    },
-    {
-      name: 'Hogar',
-      images: ['assets/assetsdash/images/profile/profile.png'],
-      idBranch: 'ca000003'
-    },
-    {
-      name: 'Tecnología',
-      images: ['assets/assetsdash/images/profile/profile.png'],
-      idBranch: 'ca000004'
-    }
+    // {
+    //   name: 'Accesorios',
+    //   images: ['assets/assetsdash/images/profile/profile.png'],
+    //   idBranch: 'ca000001'
+    // },
+    // {
+    //   name: 'Herramientas',
+    //   images: ['assets/assetsdash/images/profile/profile.png'],
+    //   idBranch: 'ca000002'
+    // },
+    // {
+    //   name: 'Hogar',
+    //   images: ['assets/assetsdash/images/profile/profile.png'],
+    //   idBranch: 'ca000003'
+    // },
+    // {
+    //   name: 'Tecnología',
+    //   images: ['assets/assetsdash/images/profile/profile.png'],
+    //   idBranch: 'ca000004'
+    // }
+    
   ];
 
   runButtonClicked() {
@@ -200,7 +201,7 @@ this.script.load(
         // Aquí puedes hacer algo con los datos obtenidos, como mostrarlos en el template.
       },
       (error) => {
-        console.error('Error al obtener existencias:', error);
+        // console.error('Error al obtener existencias:', error);
       }
     );
   }

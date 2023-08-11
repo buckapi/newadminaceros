@@ -37,9 +37,8 @@
                                 </span>
                                 <div class="media-body">
                                     <p class="fs-14 mb-2">Inventario</p>
-                                    <!-- <span class="title text-black font-w600">{{allSize}}</span> -->
-                                    <span class="title text-black font-w600" *ngIf="allSize<=0"> Loading ... </span>
-                                    <span class="title text-black font-w600" *ngIf="allSize>0">{{allSize}} Categorias </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize>0">{{yeoman.allCategoriesSize}} Categorias </span>
                            
                                 </div>
                             </div>
