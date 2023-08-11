@@ -15,6 +15,8 @@ export class Yeoman {
     pop:Boolean=false;
     data:any={};
     products:any={};
+    category:any={};
+    allcategory:any=[];
     // products:any[]=[];
     currency:number=1;
     config: {

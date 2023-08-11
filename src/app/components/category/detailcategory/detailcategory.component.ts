@@ -16,12 +16,12 @@ export class DetailcategoryComponent implements OnInit {
     public dataApiService:DataApiService
     ) {  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}}
 delete(){ 
-  this.dataApiService.deleteProduct(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllProducts().subscribe(response=>{
+  this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllCategory().subscribe(response=>{
       this.yeoman.all=response;
     });
   });
-  this.router.navigate(['/c2oAll']);
+  this.router.navigate(['/catedetail']);
 }
 cancelDelete(){}
   ngOnInit(): void {

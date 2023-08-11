@@ -28,7 +28,7 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6"  routerLink="cate" style="cursor: pointer;">
+                <div class="col-lg-4 col-sm-6"  routerLink="cateall" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -62,9 +62,12 @@
                                   <div class="media-body">
                                       <p class="fs-14 mb-2">Ordenes</p>
 
-                                      <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize<=0"> Loading ... </span>
+                                      <span class="title text-black font-w600" *ngIf=""> Loading ... </span>
+                                      <span class="title text-black font-w600" *ngIf=""> Solicitudes </span>
+                                      <!-- <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize<=0"> Loading ... </span>
                                       <span class="title text-black font-w600" *ngIf="yeoman.existenciasSize>0">{{yeoman.existenciasSize}} Solicitudes </span>
-                                  </div>
+                                  -->
+                                    </div>
                               </div>
                               <div class="progress" style="height:5px;">
                                   <div class="progress-bar bg-success" style="width: 42%; height:5px;" role="progressbar">

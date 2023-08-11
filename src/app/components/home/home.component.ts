@@ -32,6 +32,11 @@ public authRESTService:AuthRESTService,
       this.allSize=this.yeoman.all.length;
 
     });
+    this.dataApiService.getAllCategory().subscribe(response=>{
+      this.yeoman.all=response;
+      this.allSize=this.yeoman.all.length;
+
+    });
     this.obtenerExistencias();
     if(!this.authRESTService.getCurrentUser() ){this.router.navigate(['/login'])}
      this.script.load(

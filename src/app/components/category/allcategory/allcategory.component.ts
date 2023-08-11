@@ -20,7 +20,7 @@ public router:Router,
   }
 getAll(){
   this.ngxService.start("loader-01");
-  this.dataApiService.getAllProducts().subscribe(response=>{
+  this.dataApiService.getAllCategory().subscribe(response=>{
     this.yeoman.all=response;
     this.ngxService.stop("loader-01");
   });
@@ -28,7 +28,7 @@ getAll(){
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.all[i];
-  this.router.navigate(['catDetailcategory']);
+  this.router.navigate(['cateDetail']);
 }
   ngOnInit(): void {
   }

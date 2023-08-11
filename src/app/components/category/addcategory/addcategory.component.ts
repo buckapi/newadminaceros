@@ -20,22 +20,22 @@ export class AddcategoryComponent implements AfterViewInit {
  
 
   category:any;
-  products$:any={};
-  public captions: UploaderCaptions = {
-    dropzone: {
-      title: 'Imágenes del producto',
-      or: '.',
-      browse: 'Cargar',
-    },
-    cropper: {
-      crop: 'Cortar',
-      cancel: 'Cancelar',
-    },
-    previewCard: {
-      remove: 'Borrar',
-      uploadError: 'error',
-    },
-  };
+  // products$:any={};
+  // public captions: UploaderCaptions = {
+  //   dropzone: {
+  //     title: 'Imágenes del producto',
+  //     or: '.',
+  //     browse: 'Cargar',
+  //   },
+  //   cropper: {
+  //     crop: 'Cortar',
+  //     cancel: 'Cancelar',
+  //   },
+  //   previewCard: {
+  //     remove: 'Borrar',
+  //     uploadError: 'error',
+  //   },
+  // };
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
@@ -82,7 +82,7 @@ export class AddcategoryComponent implements AfterViewInit {
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['cate']);
+          this.router.navigate(['cateall']);
           Swal.fire({
             position: 'center',
             icon: 'success',

@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../c2oAll">Inventario</a></li>
+                <li class="breadcrumb-item"><a routerLink="../cateall">Inventario</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
                 <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
                 <button [swal]="
-                {title: '<strong>Borrar producto <u></u></strong>', icon: 'error',
-                html: 'Confirma que desea eliminar este producto ?',
+                {title: '<strong>Borrar categoria <u></u></strong>', icon: 'error',
+                html: 'Confirma que desea eliminar esta categoria ?',
                 showCloseButton: true,
                 showCancelButton: true,
                 cancelButtonColor: '#101554',
@@ -33,47 +33,22 @@
                             <div class="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <!-- <div role="tabpanel" class="tab-pane fade show active" id="first">
-                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
-                                        <img class="img-fluid" src="{{yeoman.preview.images[0]}}" alt="" *ngIf="yeoman.preview.images[0]!==undefined">
-                                    </div> -->
-                                    <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
+                                    
+                                    <!-- <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
                                         <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
                                         <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
-                                    </div>
-                                    
-                                    <!-- <div role="tabpanel" class="tab-pane fade" id="second">
-                                        <img class="img-fluid" src="assets/gymove/images/product/2.jpg" alt="">
-                                    </div><n<ngx-ui-loader 
-                                        [pbColor]="'#101554'"  
-                                        [bgsColor]="'#101554'"
-                                        [fgsColor]="'#101554'"
-                                        [text]="'Cargando...'"
-                                        [fgsSize]="15"
-                                        [fgsType]= "'cube-grid'"
-                                        [textColor]="'#101554'"
-                                        [overlayColor]="' rgba(255,255,255,0.8)'">
-                                        </ngx-ui-loader>gx-ui-loader 
-                                        [pbColor]="'#101554'"  
-                                        [bgsColor]="'#101554'"
-                                        [fgsColor]="'#101554'"
-                                        [text]="'Cargando...'"
-                                        [fgsSize]="15"
-                                        [fgsType]= "'cube-grid'"
-                                        [textColor]="'#101554'"
-                                        [overlayColor]="' rgba(255,255,255,0.8)'">
-                                        </ngx-ui-loader>nel" class="tab-pane fade" id="for">
-                                        <img class="img-fluid" src="assets/gymove/images/product/4.jpg" alt="">
                                     </div> -->
+                                    
+                                   
                                 </div>
                                 <div class="tab-slide-content new-arrival-product mb-4 mb-xl-0">
                                     <!-- Nav tabs -->
                                     <ul class="nav slide-item-list mt-3" role="tablist">
-                                        <li role="presentation" class="show" *ngFor="let image of yeoman.preview.images;let i =index;">
+                                        <!-- <li role="presentation" class="show" *ngFor="let image of yeoman.preview.images;let i =index;">
                                             <a href="#{{i}}" role="tab" data-toggle="tab">
                                                 <img class="img-fluid" src="{{image}}" alt="" width="50">
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <!-- <li role="presentation">
                                             <a href="#second" role="tab" data-toggle="tab"><img class="img-fluid" src="assets/gymove/images/tab/2.jpg" alt="" width="50"></a>
                                         </li>
@@ -92,7 +67,7 @@
                                     <!--Product details-->
                                     <div class="new-arrival-content pr">
                                         <h4>{{yeoman.preview.name}}</h4>
-                                        <div class="comment-review star-rating">
+                                        <!-- <div class="comment-review star-rating">
                                             <ul>
                                                 <li><i class="fa fa-star"></i></li>
                                                 <li><i class="fa fa-star"></i></li>
@@ -101,8 +76,8 @@
                                                 <li><i class="fa fa-star-half-empty"></i></li>
                                             </ul>
                                             <span class="review-text">(34 reviews) / </span><a class="product-review" href="ecom-product-detail.html"  data-toggle="modal" data-target="#reviewModal">Write a review?</a>
-                                        </div>
-                                        <div class="d-table mb-2">
+                                        </div> -->
+                                        <!-- <div class="d-table mb-2">
                                             <p class="price float-left d-block">$ {{yeoman.preview.price}}</p>
                                         </div>
                                         <p>Availability: <span class="item"> In stock <i
@@ -130,7 +105,7 @@
                                                     <label class="btn btn-outline-primary light btn-sm"><input type="radio" class="position-absolute invisible" name="options" id="option4"> XL</label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!--Quantity start-->
                                         <div class="col-2 px-0">
                                             <input type="number" name="num" class="form-control input-btn input-number" value="1">

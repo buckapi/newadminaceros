@@ -70,6 +70,13 @@ export class DataApiService {
 		.delete<PartInterface>(url_api, {headers: this.headers})
 		.pipe(map(data => data));
 	}
+	deleteCategory(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}/?access_token$={token}`;
+		return this.http
+		.delete<PartInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
 	deleteCar(id: string){
 		const token = this.AuthRESTService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
@@ -105,6 +112,10 @@ export class DataApiService {
 	}
 	getAllProducts(){
 		const url_api = 	this.yeoman.origin.restUrl+'/api/products';
+		return this.http.get(url_api);
+	}
+	getAllCategory(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/categories';
 		return this.http.get(url_api);
 	}
 	getAllCars(){
@@ -231,7 +242,7 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	saveCategory(category :CategoryInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/category';
+		const url_api=	this.yeoman.origin.restUrl+'/api/categories';
 		return this.http
 		.post<CategoryInterface>(url_api, category)
 		.pipe(map(data => data));
