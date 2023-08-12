@@ -33,38 +33,13 @@
                             <div class="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <!-- <div role="tabpanel" class="tab-pane fade show active" id="first">
-                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
-                                        <img class="img-fluid" src="{{yeoman.preview.images[0]}}" alt="" *ngIf="yeoman.preview.images[0]!==undefined">
-                                    </div> -->
+                                   
                                     <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
                                         <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
                                         <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
                                     </div>
                                     
-                                    <!-- <div role="tabpanel" class="tab-pane fade" id="second">
-                                        <img class="img-fluid" src="assets/gymove/images/product/2.jpg" alt="">
-                                    </div><n<ngx-ui-loader 
-                                        [pbColor]="'#101554'"  
-                                        [bgsColor]="'#101554'"
-                                        [fgsColor]="'#101554'"
-                                        [text]="'Cargando...'"
-                                        [fgsSize]="15"
-                                        [fgsType]= "'cube-grid'"
-                                        [textColor]="'#101554'"
-                                        [overlayColor]="' rgba(255,255,255,0.8)'">
-                                        </ngx-ui-loader>gx-ui-loader 
-                                        [pbColor]="'#101554'"  
-                                        [bgsColor]="'#101554'"
-                                        [fgsColor]="'#101554'"
-                                        [text]="'Cargando...'"
-                                        [fgsSize]="15"
-                                        [fgsType]= "'cube-grid'"
-                                        [textColor]="'#101554'"
-                                        [overlayColor]="' rgba(255,255,255,0.8)'">
-                                        </ngx-ui-loader>nel" class="tab-pane fade" id="for">
-                                        <img class="img-fluid" src="assets/gymove/images/product/4.jpg" alt="">
-                                    </div> -->
+                                   
                                 </div>
                                 <div class="tab-slide-content new-arrival-product mb-4 mb-xl-0">
                                     <!-- Nav tabs -->
@@ -74,15 +49,7 @@
                                                 <img class="img-fluid" src="{{image}}" alt="" width="50">
                                             </a>
                                         </li>
-                                        <!-- <li role="presentation">
-                                            <a href="#second" role="tab" data-toggle="tab"><img class="img-fluid" src="assets/gymove/images/tab/2.jpg" alt="" width="50"></a>
-                                        </li>
-                                        <li role="presentation">
-                                            <a href="#third" role="tab" data-toggle="tab"><img class="img-fluid" src="assets/gymove/images/tab/3.jpg" alt="" width="50"></a>
-                                        </li>
-                                        <li role="presentation">
-                                            <a href="#for" role="tab" data-toggle="tab"><img class="img-fluid" src="assets/gymove/images/tab/4.jpg" alt="" width="50"></a>
-                                        </li> -->
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -93,33 +60,28 @@
                                     <div class="new-arrival-content pr">
                                         <h4>{{yeoman.preview.name}}</h4>
                                         <div class="comment-review star-rating">
-                                            <ul>
+                                            <!-- <ul>
                                                 <li><i class="fa fa-star"></i></li>
                                                 <li><i class="fa fa-star"></i></li>
                                                 <li><i class="fa fa-star"></i></li>
                                                 <li><i class="fa fa-star-half-empty"></i></li>
                                                 <li><i class="fa fa-star-half-empty"></i></li>
-                                            </ul>
+                                            </ul> -->
                                             <!-- <span class="review-text">(34 reviews) / </span><a class="product-review" href="ecom-product-detail.html"  data-toggle="modal" data-target="#reviewModal">Write a review?</a> -->
                                         </div>
                                         <div class="d-table mb-2">
                                             <p class="price float-left d-block">$ {{yeoman.preview.price}}</p>
                                         </div>
-                                        <p>Disponibilidad: <span class="item"> In stock <i
-                                                    class="fa fa-shopping-basket"></i></span>
+                                        <p>Disponibilidad:  <i class="fa fa-shopping-basket"></i>  <span class="item"> En stock{{yeoman.preview.stock}} productos
+                                           </span>
                                         </p>
-                                        <p>Ref: <span class="item">{{yeoman.preview.ref}}</span> </p>
+                                        <p>Ref: <span class="item">{{yeoman.preview.referencia}}</span> </p>
                                         <p>Categoria: <span class="item">{{yeoman.preview.category}}</span></p>
-                                        <!-- <p>Product tags:&nbsp;&nbsp;
-                                            <span class="badge badge-success light">bags</span>
-                                            <span class="badge badge-success light">clothes</span>
-                                            <span class="badge badge-success light">shoes</span>
-                                            <span class="badge badge-success light">dresses</span>
-                                        </p> -->
-                                        <p class="text-content">{{yeoman.preview.description}}</p>
+                                      
+                                        <p class="text-content">Descripción: <span class="item">{{yeoman.preview.description}}</span></p>
                                         <div class="filtaring-area my-3">
                                             <div class="size-filter">
-                                                <h4 class="m-b-15">Select size</h4>
+                                                <h4 class="m-b-15">Dimensiones</h4>
                                                 
                                                 <div class="btn-group" data-toggle="buttons">
                                                     <label class="btn btn-outline-primary light btn-sm"><input type="radio" class="position-absolute invisible" name="options" id="option5"> XS</label>
@@ -131,9 +93,9 @@
                                             </div>
                                         </div>
                                         <!--Quantity start-->
-                                        <div class="col-2 px-0">
+                                        <!-- <div class="col-2 px-0">
                                             <input type="number" name="num" class="form-control input-btn input-number" value="1">
-                                        </div>
+                                        </div> -->
                                         <!--Quanatity End-->
                                         <!-- <div class="shopping-cart mt-3">
                                             <a class="btn btn-primary btn-lg" href="javascript:void(0)"><i

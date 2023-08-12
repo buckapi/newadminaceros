@@ -1,4 +1,4 @@
-import { Component, OnInit ,AfterViewInit,ViewChild} from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { UploaderCaptions } from 'ngx-awesome-uploader';
 import { Yeoman } from '@services/yeoman.service';
 import { DemoFilePickerAdapter } from  '@app/file-picker.adapter';
@@ -42,7 +42,8 @@ export class AddComponent implements AfterViewInit {
     price: null,
     stock: 0,
     ref: '',
-    idCategory: ''
+    referencia: '',
+    idCategory: '',
   };
 
  
@@ -88,8 +89,7 @@ this.getAllCategories();
           });
         }
        
-        onCategorySelect(category:any) {
-        
+        onCategorySelect(category:any) {        
           this.data.idCategory = category.idCategory;
           console.log(category.id);
         }

@@ -32,7 +32,7 @@
                                     <div class="">
                                         <div class="form-group">
                                         <label for="event-name">Ref:</label>
-                                        <input  class="form-control" placeholder="Referencia"type="number" [(ngModel)]="data.ref" name="name" required  [ngModelOptions]="{standalone: true}">
+                                        <input  class="form-control" placeholder="Referencia"type="number" [(ngModel)]="data.referencia" name="name" required  [ngModelOptions]="{standalone: true}">
                                         </div>
                                     </div>
                                 </div>
@@ -60,14 +60,14 @@
                                 <div class="">
                                   <div class="form-group">
                                     <label for="event-description">Categoría</label>
-                                    <!-- <select class="form-control form-control-lg default-select "
+                                    <select class="form-control form-control-lg default-select "
                                             >
                                       <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
-                                    </select> -->
+                                    </select>
 
-                    <select id="category" class="form-control wide my-custom-select"[(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
-                        <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> <span   style="cursor:pointer;">{{category.name}}</span></option>
-                    </select>
+                                    <!-- <select id="category" class="form-control wide my-custom-select"[(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                        <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> <span   style="cursor:pointer;">{{category.name}}</span></option>
+                                    </select> -->
                                   </div>
                                 </div>
                               </div>
@@ -81,7 +81,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="">
+                              <!-- <div class="">
                                 <div class="">
                                   <div class="form-group">
                                     <label for="event-description">Dimensiones</label>
@@ -94,6 +94,14 @@
                                   <div class="form-group">
                                     <label for="event-description">Peso/k</label>
                                     <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
+                                  </div>
+                                </div>
+                              </div> -->
+                              <div class="">
+                                <div class="">
+                                  <div class="form-group">
+                                    <label for="event-name">Stock de Inventario</label>
+                                    <input class="form-control" placeholder="numero de productos" type="number" [(ngModel)]="data.stock" name="price"  [ngModelOptions]="{standalone: true}" required>
                                   </div>
                                 </div>
                               </div>
