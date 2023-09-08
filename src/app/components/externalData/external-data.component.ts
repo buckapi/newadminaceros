@@ -12,8 +12,8 @@ export class ExternalDataComponent implements OnInit {
   p: number = 1;
   page: number = 1;
   count: number = 0;
-  itemsPP:number=30;
-  options: number[] = [30, 50, 100];
+  itemsPP:number=20;
+  options: number[] = [20, 50, 100];
   tableSize: number = 7;
   tableSizes: any = [3, 6, 9, 12];
 

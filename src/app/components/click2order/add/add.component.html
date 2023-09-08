@@ -44,30 +44,24 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- <div class="">
-                                <div class="">
-                                    <div class="form-group">
-                                        <label for="event-description">Categoría</label>
-                                        <select class="form-control form-control-lg default-select ">
-                                            
-                                      <option *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                              </div> -->
-                              
+                                                          
                               <div class="">
                                 <div class="">
                                   <div class="form-group">
                                     <label for="event-description">Categoría</label>
-                                    <select class="form-control form-control-lg default-select "
-                                            >
+                                    <!-- <select class="form-control form-control-lg default-select ">
                                       <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
-                                    </select>
-
-                                    <!-- <select id="category" class="form-control wide my-custom-select"[(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
-                                        <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> <span   style="cursor:pointer;">{{category.name}}</span></option>
                                     </select> -->
+                                    <!-- <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                    <option *ngFor="let category of yeoman.categories; let i = index" [ngValue]="category.idCategory">
+                                        <span style="cursor:pointer;">{{ category.name }}</span>
+                                    </option>
+                                    </select> -->
+                                    <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                        <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
+                                            <span   style="cursor:pointer;">{{category.name}}</span>
+                                        </option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
@@ -81,22 +75,14 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- <div class="">
-                                <div class="">
-                                  <div class="form-group">
-                                    <label for="event-description">Dimensiones</label>
-                                    <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="">
-                                <div class="">
-                                  <div class="form-group">
-                                    <label for="event-description">Peso/k</label>
-                                    <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
-                                  </div>
-                                </div>
-                              </div> -->
+                              <!-- <form>
+                                <label for="diametroPulgadas">Diametro en Pulgadas:</label>
+                                <select id="diametroPulgadas" name="diametroPulgadas" [(ngModel)]="selectedDiametro">
+                                  <option *ngFor="let option of diametroPulgadasOptions" [value]="option">{{ option }}</option>
+                                </select>
+                              </form>
+                              -->
+                            
                               <div class="">
                                 <div class="">
                                   <div class="form-group">

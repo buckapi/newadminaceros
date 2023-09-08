@@ -12,8 +12,8 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">External DATA</a></li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">API comunications</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Inventario</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Ordenes de compra</a></li>
             </ol>
             
                
@@ -48,10 +48,10 @@
                                                 <label class="custom-control-label" for="checkAll"></label>
                                             </div>
                                         </th>
-                                        <th>#</th>
-                                        <th>COD</th>
+                                        <th>#Orden</th>
                                         <th>Nombre</th>
-                                        <th>Existencia</th>
+                                        <th>Teléfono</th>
+                                        <th>Productos</th>
                                        
                                         <th></th>
                                     </tr>
@@ -66,7 +66,7 @@
                                                 <label class="custom-control-label" for="checkbox1"></label>
                                             </div>
                                         </td>
-                                        <td class="py-2"> <a href="tel:2012001851">{{existencia.pos+1}}</a></td>
+                                        <!-- <td class="py-2"> <a href="tel:2012001851">{{existencia.pos+1}}</a></td>
                                        
                                         <td class="py-2"> <a href="tel:2012001851">{{existencia.arcodigo}}</a></td>
                                         
@@ -85,13 +85,13 @@
                                             </a>
                                         </td>
                                         <td class="py-2"><a
-                                                href="mailto:ricky@example.com">{{existencia.arexistencia | number:'1.0-0'}}</a></td>
+                                                href="mailto:ricky@example.com">{{existencia.arexistencia | number:'1.0-0'}}</a></td> -->
                                         
                                         
                                         <td class="py-2 text-right">
                                             <div class="dropdown"><button class="btn btn-primary tp-btn-light sharp" type="button" data-toggle="dropdown"><span class="fs--1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
                                                 <div class="dropdown-menu dropdown-menu-right border py-0">
-                                                    <div class="py-2"><a class="dropdown-item"  href="ecom-customers.html#!">Edit</a><a class="dropdown-item text-danger" href="ecom-customers.html#!">Delete</a></div>
+                                                    <div class="py-2"><a class="dropdown-item"  href="#">Ver detalle</a><a class="dropdown-item text-danger" href="#">Borrar</a></div>
                                                 </div>
                                             </div>
                                         </td>
