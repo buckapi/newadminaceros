@@ -52,11 +52,7 @@
                                     <!-- <select class="form-control form-control-lg default-select ">
                                       <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
                                     </select> -->
-                                    <!-- <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
-                                    <option *ngFor="let category of yeoman.categories; let i = index" [ngValue]="category.idCategory">
-                                        <span style="cursor:pointer;">{{ category.name }}</span>
-                                    </option>
-                                    </select> -->
+                                    
                                     <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
                                         <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
                                             <span   style="cursor:pointer;">{{category.name}}</span>

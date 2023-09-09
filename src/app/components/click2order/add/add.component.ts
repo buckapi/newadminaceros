@@ -100,27 +100,14 @@ this.getAllCategories();
         
         setCategory(category:any){
           let index=category;
-console.log("seleccionada: "+this.yeoman.allcategory[index].name);
+          console.log("seleccionada: "+this.yeoman.allcategory[index].name);
           this.categorySeted=true;
           if (this.yeoman.categories!==undefined){
           this.data.idCategory=this.yeoman.allcategory[index].id;
           console.log("id: "+JSON.stringify(this.data.idCategory));
           }
         }
-        // setCategory(category: any) {
-        //   this.categorySeted = true;
-        
-        //   if (
-        //     this.yeoman.categories &&
-        //     this.yeoman.categories.length > category &&
-        //     this.yeoman.categories[category].hasOwnProperty('is')
-        //   ) {
-        //     this.data.idCategory = this.yeoman.categories[category].is;
-        //     console.log("Selected Category ID: " + this.data.idCategory);
-        //   } else {
-        //     console.error("La propiedad 'is' no existe en esta categoría o el índice está fuera de los límites.");
-        //   }
-        // }
+    
 
     ngAfterViewInit(): void {
   }
