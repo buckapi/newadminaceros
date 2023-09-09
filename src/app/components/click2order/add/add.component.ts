@@ -18,6 +18,7 @@ export class AddComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
   category='Seleccione una';
   categorySeted:boolean=false;
+ 
   
  
   products$:any={};
@@ -46,6 +47,8 @@ export class AddComponent implements AfterViewInit {
     ref: '',
     referencia: '',
     idCategory: '',
+    dimensiones: '',
+    calibre: ''
   };
 
   
@@ -70,7 +73,7 @@ this.getAllCategories();
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['c2oAll']);
+          this.router.navigate(['proall']);
           Swal.fire({
             position: 'center',
             icon: 'success',

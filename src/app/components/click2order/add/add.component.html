@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../c2oAll">Productos</a></li>
+                <li class="breadcrumb-item"><a routerLink="../proall">Productos</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar producto</a></li>
             </ol>
         </div>
@@ -17,94 +17,107 @@
 
                         <form>
                             <div class="row">
-                            <div class="col-md-6">
-                              <div class="">
-                                <div class="">
-                                  <ngx-awesome-uploader
-                                  [adapter]="adapter"
-                                  [captions]="captions">
-                                  </ngx-awesome-uploader>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
+                                <div class="col-md-4">
                                 <div class="">
                                     <div class="">
-                                        <div class="form-group">
-                                        <label for="event-name">Ref:</label>
-                                        <input  class="form-control" placeholder="Referencia"type="number" [(ngModel)]="data.referencia" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    <ngx-awesome-uploader
+                                    [adapter]="adapter"
+                                    [captions]="captions">
+                                    </ngx-awesome-uploader>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="form-group">
+                                            <label for="event-name">Ref:</label>
+                                            <input  class="form-control" placeholder="Referencia"type="number" [(ngModel)]="data.referencia" name="name" required  [ngModelOptions]="{standalone: true}">
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Nombre del producto</label>
+                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    </div>
+                                </div>
+                                                            
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-description">Categoría</label>
+                                        <!-- <select class="form-control form-control-lg default-select ">
+                                        <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
+                                        </select> -->
+                                        
+                                        <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                            <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
+                                                <span   style="cursor:pointer;">{{category.name}}</span>
+                                            </option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="">
+                                    <div class="">
+                                        
+                                    <div class="form-group">
+                                        <label for="event-description">Descripción</label>
+                                        <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+                                <!-- <form>
+                                    <label for="diametroPulgadas">Diametro en Pulgadas:</label>
+                                    <select id="diametroPulgadas" name="diametroPulgadas" [(ngModel)]="selectedDiametro">
+                                    <option *ngFor="let option of diametroPulgadasOptions" [value]="option">{{ option }}</option>
+                                    </select>
+                                </form>
+                                -->
+                                
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Dimensiones</label>
+                                        <input class="form-control" placeholder="ancho * largo" type="string" [(ngModel)]="data.dimensiones" name="price"  [ngModelOptions]="{standalone: true}" required>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="">
-                                <div class="">
-                                  <div class="form-group">
-                                    <label for="event-name">Nombre del producto</label>
-                                    <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
-                                  </div>
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Calibre</label>
+                                        <input class="form-control" placeholder="Diamentro o grosor" type="number" [(ngModel)]="data.calibre" name="price"  [ngModelOptions]="{standalone: true}" required>
+                                    </div>
+                                    </div>
                                 </div>
-                              </div>
-                                                          
-                              <div class="">
                                 <div class="">
-                                  <div class="form-group">
-                                    <label for="event-description">Categoría</label>
-                                    <!-- <select class="form-control form-control-lg default-select ">
-                                      <option (click)="onCategorySelect(category)" *ngFor="let category of yeoman.allcategory" [value]="category.idCategory">{{ category.name }}</option>
-                                    </select> -->
-                                    
-                                    <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
-                                        <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
-                                            <span   style="cursor:pointer;">{{category.name}}</span>
-                                        </option>
-                                    </select>
-                                  </div>
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Stock de Inventario</label>
+                                        <input class="form-control" placeholder="numero de productos" type="number" [(ngModel)]="data.stock" name="price"  [ngModelOptions]="{standalone: true}" required>
+                                    </div>
+                                    </div>
                                 </div>
-                              </div>
-                              
-                              <div class="">
                                 <div class="">
-                                    
-                                  <div class="form-group">
-                                    <label for="event-description">Descripción</label>
-                                    <textarea    [ngModelOptions]="{standalone: true}" [(ngModel)]="data.description"class="form-control" ></textarea>
-                                  </div>
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Precio del producto</label>
+                                        <input class="form-control" placeholder="precio" type="number" [(ngModel)]="data.price" name="price"  [ngModelOptions]="{standalone: true}" required>
+                                    </div>
+                                    </div>
                                 </div>
-                              </div>
-                              <!-- <form>
-                                <label for="diametroPulgadas">Diametro en Pulgadas:</label>
-                                <select id="diametroPulgadas" name="diametroPulgadas" [(ngModel)]="selectedDiametro">
-                                  <option *ngFor="let option of diametroPulgadasOptions" [value]="option">{{ option }}</option>
-                                </select>
-                              </form>
-                              -->
-                            
-                              <div class="">
-                                <div class="">
-                                  <div class="form-group">
-                                    <label for="event-name">Stock de Inventario</label>
-                                    <input class="form-control" placeholder="numero de productos" type="number" [(ngModel)]="data.stock" name="price"  [ngModelOptions]="{standalone: true}" required>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="">
-                                <div class="">
-                                  <div class="form-group">
-                                    <label for="event-name">Precio del producto</label>
-                                    <input class="form-control" placeholder="precio" type="number" [(ngModel)]="data.price" name="price"  [ngModelOptions]="{standalone: true}" required>
-                                  </div>
-                                </div>
-                              </div>
+                               
                             </div>
-                          </div>
-                        
-                            
-                            
-                        
                             <div class="popup-box-actions medium void">
                               <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()">Guardar producto!</button>
                             </div>
-                          </form>
+                        </form>
 
 
 

@@ -8727,7 +8727,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 * {
   outline: none;
-  padding: 0; }
+  padding: 2px; }
   *::after {
     margin: 0;
     padding: 0; }

@@ -27,7 +27,7 @@ delete(){
       this.yeoman.all=response;
     });
   });
-  this.router.navigate(['/c2oAll']);
+  this.router.navigate(['/proall']);
 }
 
 findCategory(){

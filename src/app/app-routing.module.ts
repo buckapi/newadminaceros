@@ -9,11 +9,11 @@ const routes: Routes = [
   
   { path: 'externalData', loadChildren: () => import('./components/externalData/external-data.module').then(m => m.ExternalDataModule) },
   
-  { path: 'c2oDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
+  { path: 'prodetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
   
-  { path: 'c2oAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
+  { path: 'proall', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
   
-  { path: 'c2oAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
+  { path: 'proadd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
 
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 

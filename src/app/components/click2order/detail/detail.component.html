@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../c2oAll">Inventario</a></li>
+                <li class="breadcrumb-item"><a routerLink="../proall">Inventario</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
                 <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
                 <button [swal]="
@@ -76,9 +76,12 @@
                                            </span>
                                         </p>
                                         <p>Ref: <span class="item">{{yeoman.preview.referencia}}</span> </p>
-                                        <p>Categoria: <span class="item">{{category}}</span></p>
-                                      
+                                        <p>Categoria: <span class="item">{{category}}</span></p>                                      
                                         <p class="text-content">Descripción: <span class="item">{{yeoman.preview.description}}</span></p>
+                                        <p class="text-content">Dimensiones: <span class="item">{{yeoman.preview.dimensiones}}</span></p>
+                                        <p class="text-content">Calibre: <span class="item">{{yeoman.preview.calibre}}</span></p>
+
+
                                         <!-- <div class="filtaring-area my-3">
                                             <div class="size-filter">
                                                 <h4 class="m-b-15">Dimensiones</h4>
