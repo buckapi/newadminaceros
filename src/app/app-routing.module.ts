@@ -7,19 +7,22 @@ const routes: Routes = [
   
   { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   
-  { path: 'externalData', loadChildren: () => import('./components/externalData/external-data.module').then(m => m.ExternalDataModule) },
+  { path: 'proDetail', loadChildren: () => import('./components/product/detail/detail.module').then(m => m.DetailModule) },
   
-  { path: 'c2oDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
+  { path: 'proAll', loadChildren: () => import('./components/product/all/all.module').then(m => m.AllModule) },
   
-  { path: 'c2oAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
-  
-  { path: 'c2oAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
+  { path: 'proAdd', loadChildren: () => import('./components/product/add/add.module').then(m => m.AddModule) },
+
+  { path: 'proEdit', loadChildren: () => import('./components/product/edit/edit.module').then(m => m.EditModule) },
 
   { path: 'cateadd', loadChildren: () => import('./components/category/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 
   { path: 'cateall', loadChildren: () => import('./components/category/allcategory/allcategory.module').then(m => m.AllcategoryModule) },
 
   { path: 'catedetail', loadChildren: () => import('./components/category/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
+  
+  { path: 'editcategory', loadChildren: () => import('./components/category/editcategory/editcategory.module').then(m => m.EditcategoryModule) },
+  
 ];
 
 @NgModule({
