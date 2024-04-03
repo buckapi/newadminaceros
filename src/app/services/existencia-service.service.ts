@@ -7,13 +7,13 @@ import { Yeoman } from './yeoman.service';
   providedIn: 'root'
 })
 export class ExistenciaService {
-  private baseUrl = 'https://herdel.info:8443/webapi/existencia';
+  private baseUrl = '';
 
   constructor(private http: HttpClient,
     public yeoman:Yeoman) { }
 
   getAllExistencias(familia: any): Observable<any> {
-    const url = `${this.baseUrl}/getall?familia=%5Bobject+Object%5D`;
+    const url = `${this.baseUrl}`;
    this.yeoman.existencias=this.http.get<any>(url);
     return this.http.get<any>(url);
   }

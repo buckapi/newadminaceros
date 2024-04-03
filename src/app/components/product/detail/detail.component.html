@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="../c2oAll">Inventario</a></li>
+                <li class="breadcrumb-item"><a routerLink="../proAll">Inventario</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
                 <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
                 <button [swal]="
@@ -60,26 +60,21 @@
                                     <div class="new-arrival-content pr">
                                         <h4>{{yeoman.preview.name}}</h4>
                                         <div class="comment-review star-rating">
-                                            <!-- <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star-half-empty"></i></li>
-                                                <li><i class="fa fa-star-half-empty"></i></li>
-                                            </ul> -->
-                                            <!-- <span class="review-text">(34 reviews) / </span><a class="product-review" href="ecom-product-detail.html"  data-toggle="modal" data-target="#reviewModal">Write a review?</a> -->
                                         </div>
                                         <div class="d-table mb-2">
                                             <p class="price float-left d-block">$ {{yeoman.preview.price}}</p>
                                         </div>
-                                        <p>Disponibilidad:  <i class="fa fa-shopping-basket"></i>  <span class="item"> En stock{{yeoman.preview.stock}} productos
+                                        <p>Stock:   <span class="item"> {{yeoman.preview.stock}} productos
                                            </span>
                                         </p>
                                         <p>Ref: <span class="item">{{yeoman.preview.referencia}}</span> </p>
-                                        <p>Categoria: <span class="item">{{yeoman.preview.category}}</span></p>
-                                      
+                                        <p>Categoria: <span class="item">{{category}}</span></p>                                      
                                         <p class="text-content">Descripción: <span class="item">{{yeoman.preview.description}}</span></p>
-                                        <div class="filtaring-area my-3">
+                                        <p class="text-content">Dimensiones: <span class="item">{{yeoman.preview.dimensiones}}</span></p>
+                                        <p class="text-content">Calibre: <span class="item">{{yeoman.preview.calibre}}</span></p>
+
+
+                                        <!-- <div class="filtaring-area my-3">
                                             <div class="size-filter">
                                                 <h4 class="m-b-15">Dimensiones</h4>
                                                 
@@ -91,13 +86,11 @@
                                                     <label class="btn btn-outline-primary light btn-sm"><input type="radio" class="position-absolute invisible" name="options" id="option4"> XL</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!--Quantity start-->
+                                        </div> -->
                                         <!-- <div class="col-2 px-0">
                                             <input type="number" name="num" class="form-control input-btn input-number" value="1">
-                                        </div> -->
-                                        <!--Quanatity End-->
-                                        <!-- <div class="shopping-cart mt-3">
+                                        </div> 
+                                        <div class="shopping-cart mt-3">
                                             <a class="btn btn-primary btn-lg" href="javascript:void(0)"><i
                                                     class="fa fa-shopping-basket mr-2"></i>Add
                                                 to cart</a>

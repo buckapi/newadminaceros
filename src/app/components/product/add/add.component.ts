@@ -14,9 +14,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements AfterViewInit {
+  
   @ViewChild('deleteSwal')
   category='Seleccione una';
   categorySeted:boolean=false;
+ 
+  
  
   products$:any={};
   public captions: UploaderCaptions = {
@@ -44,8 +47,11 @@ export class AddComponent implements AfterViewInit {
     ref: '',
     referencia: '',
     idCategory: '',
+    dimensiones: '',
+    calibre: ''
   };
 
+  
  
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
   constructor(
@@ -67,7 +73,7 @@ this.getAllCategories();
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['c2oAll']);
+          this.router.navigate(['proall']);
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -85,6 +91,7 @@ this.getAllCategories();
         getAllCategories(){
           this.dataApiService.getAllCategory().subscribe(response=>{
             this.yeoman.categories=response;
+            this.yeoman.allcategory=response;
             this.yeoman.allCategoriesSize= this.yeoman.categories.length;
           });
         }
@@ -95,10 +102,16 @@ this.getAllCategories();
         }
         
         setCategory(category:any){
+          let index=category;
+          console.log("seleccionada: "+this.yeoman.allcategory[index].name);
           this.categorySeted=true;
-          this.data.idCategory=this.yeoman.categories[category].is;
-          console.log("selected: "+JSON.stringify(this.yeoman.categories[category].id));
+          if (this.yeoman.categories!==undefined){
+          this.data.idCategory=this.yeoman.allcategory[index].id;
+          console.log("id: "+JSON.stringify(this.data.idCategory));
+          }
         }
+    
+
     ngAfterViewInit(): void {
   }
 

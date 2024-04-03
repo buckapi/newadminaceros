@@ -28,7 +28,7 @@ getAll(){
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.all[i];
-  this.router.navigate(['c2oDetail']);
+  this.router.navigate(['proDetail']);
 }
   ngOnInit(): void {
   }
