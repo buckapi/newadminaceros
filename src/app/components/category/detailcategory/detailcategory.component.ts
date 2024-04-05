@@ -18,6 +18,10 @@ export class DetailcategoryComponent implements OnInit {
     { 
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
     }
+editCategory(){
+  this.router.navigate(['editcategory']);
+}
+
 delete(){ 
   this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllCategory().subscribe(response=>{

@@ -1,0 +1,44 @@
+.card {
+    margin-bottom: 1.875rem;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    position: relative;
+    border: 1px solid #156ee1;
+    border-radius: 1.25rem;
+    box-shadow: 2px 2px 2px 0px #156ee1;
+    height: calc(100% - 30px);
+}
+
+.module-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.item {
+    color: #007bff; /* Cambia el color de texto a azul */
+    font-weight: normal; /* Restaura el peso de la fuente a normal */
+}
+
+/* Puedes agregar más estilos según tus necesidades */
+
+  
+  .btn-primary1{
+    color: #0a6ed5;
+    border-color: #1367c8;
+    margin-right: 5px;
+    padding: 0.438rem 1rem;
+    font-weight: 600;
+    border-radius: 1.25rem;
+    font-size: small;
+  }
+
+
+

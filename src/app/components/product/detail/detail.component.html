@@ -4,26 +4,38 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a routerLink="../proAll">Inventario</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
-                <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
-                <button [swal]="
-                {title: '<strong>Borrar producto <u></u></strong>', icon: 'error',
-                html: 'Confirma que desea eliminar este producto ?',
-                showCloseButton: true,
-                showCancelButton: true,
-                cancelButtonColor: '#101554',
-                confirmButtonColor: '#ff3366',
-                focusConfirm: true,
-                confirmButtonText:' Borrar',
-                confirmButtonAriaLabel: 'Thumbs up, great!',
-                cancelButtonText: ' Cancelar',
-                cancelButtonAriaLabel: 'Thumbs down'
-                }"
-                (confirm)="delete()"
-                (dismiss)="cancelDelete()"
-                 class="btn btn-danger light btn-md ml-auto " style="margin-right:10%;">
-                <i class="feather icon-trash"></i>Borrar
-                </button>
+              
             </ol>
+            <ol class="breadcrumb" style="justify-content: end;">
+                <li>
+                    <button class="btn btn-primary1 ml-auto" (click)="editProduct()" style="display: flex; flex-direction: column; align-items: center;">
+                      <i class="feather icon-drawar" style="margin-bottom: 5px;"></i>
+                      Editar
+                    </button>
+                  </li>
+                  
+                <li>
+                    <button [swal]="
+                    {title: '<strong>Borrar album <u></u></strong>', icon: 'error',
+                    html: 'Confirma que desea eliminar esta album ?',
+                    showCloseButton: true,
+                    showCancelButton: true,
+                    cancelButtonColor: '#101554',
+                    confirmButtonColor: '#ff3366',
+                    focusConfirm: true,
+                    confirmButtonText:' Borrar',
+                    confirmButtonAriaLabel: 'Thumbs up, great!',
+                    cancelButtonText: ' Cancelar',
+                    cancelButtonAriaLabel: 'Thumbs down'
+                    }"
+                    (confirm)="delete()"
+                    (dismiss)="cancelDelete()"
+                     class="btn btn-outline-danger light  ml-auto btn-xs" style="margin-right:10%;">
+                    <i class="feather icon-trash"></i> Borrar
+                    </button>
+                   </li>
+            </ol>
+            
         </div>
         <div class="row">
             <div class="col-lg-12">

@@ -19,7 +19,9 @@ export class DetailComponent implements OnInit {
         this.router.navigate([''])}
         this.findCategory();
       }
-
+editProduct(){
+  this.router.navigate(['proEdit']);
+}
 delete(){ 
   this.dataApiService.deleteProduct(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllProducts().subscribe(response=>{
